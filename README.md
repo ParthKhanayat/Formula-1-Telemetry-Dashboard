@@ -32,13 +32,9 @@ This project uses vanilla web technologies and does not require Node.js or a bun
    git clone [https://github.com/ParthKhanayat/Formula-1-Telemetry-Dashboard.git](https://github.com/ParthKhanayat/Formula-1-Telemetry-Dashboard.git)
   2. **Navigate to the project directory:**
      ```bash
-
     cd Formula-1-Telemetry-Dashboard
-
     Open the application:
-
         Simply double-click index.html to open it in your browser.
-
         Alternatively (Recommended): Use the Live Server extension in VS Code to avoid any CORS issues during API fetching.
 
 📁 Project Structure
@@ -58,6 +54,8 @@ This project uses vanilla web technologies and does not require Node.js or a bun
 **⚠️ Note on API Rate Limits**
 
 This application makes sequential fetch() requests to the OpenF1 API to prevent 429 Too Many Requests errors. If data fails to load initially, the API may be experiencing high traffic. Wait a few seconds and try refreshing the session.
+
+**Disclaimer: This website is not associated, affiliated, authorized, endorsed, or officially connected in any way with Formula 1, the FIA, or any of its subsidiaries or affiliates.**
 
 **👨‍💻 Author**
 
