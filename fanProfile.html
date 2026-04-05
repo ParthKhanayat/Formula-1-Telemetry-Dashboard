@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fan Profile</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible+Mono:ital,wght@0,200..800;1,200..800&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Orbitron:wght@400..900&display=swap"
+        rel="stylesheet">
+</head>
+
+<body class="body1">
+
+    <div class="box" style="background-color: rgba(255, 0, 255, 0.178); backdrop-filter: blur(10px);">
+        <form id="settingsForm">
+            <h1>Enter your details</h1>
+
+            <label for="username">Name: </label>
+            <input type="text" id="username">
+
+            <label for="fanbio">Bio:</label>
+            <textarea id="fanbio">fan bio...</textarea>
+
+            <div class="checkbox-group">
+                <input type="checkbox" id="redFlagCheck" value="Red Flag" onchange="alertStatus(this)">
+                <label for="redFlagCheck">Enable Red Flag Desktop Alerts</label>
+            </div>
+
+            <div class="checkbox-group">
+                <input type="checkbox" id="safetyCarCheck" value="Safety Car" onchange="alertStatus(this)">
+                <label for="safetyCarCheck">Enable Safety Car Alerts</label>
+            </div>
+            <br><br>
+
+            <label for="list">Favourite Drivers (Hold CTRL/CMD to select multiple):</label>
+            <br>
+            <select name="list" id="list" multiple size="4">
+                <option value="Max Verstappen">Max Verstappen</option>
+                <option value="Sergio Perez">Sergio Perez</option>
+                <option value="Lewis Hamilton">Lewis Hamilton</option>
+                <option value="Charles Leclerc">Charles Leclerc</option>
+                <option value="Lando Norris">Lando Norris</option>
+                <option value="Oscar Piastri">Oscar Piastri</option>
+                <option value="George Russell">George Russell</option>
+                <option value="Carlos Sainz">Carlos Sainz</option>
+                <option value="Fernando Alonso">Fernando Alonso</option>
+                <option value="Lance Stroll">Lance Stroll</option>
+                <option value="Yuki Tsunoda">Yuki Tsunoda</option>
+                <option value="Daniel Ricciardo">Daniel Ricciardo</option>
+                <option value="Alexander Albon">Alexander Albon</option>
+                <option value="Logan Sargeant">Logan Sargeant</option>
+                <option value="Esteban Ocon">Esteban Ocon</option>
+                <option value="Pierre Gasly">Pierre Gasly</option>
+                <option value="Valtteri Bottas">Valtteri Bottas</option>
+                <option value="Zhou Guanyu">Zhou Guanyu</option>
+                <option value="Kevin Magnussen">Kevin Magnussen</option>
+                <option value="Nico Hulkenberg">Nico Hulkenberg</option>
+
+                <option value="Sebastian Vettel">Sebastian Vettel</option>
+                <option value="Kimi Raikkonen">Kimi Raikkonen</option>
+                <option value="Michael Schumacher">Michael Schumacher</option>
+                <option value="Ayrton Senna">Ayrton Senna</option>
+                <option value="Alain Prost">Alain Prost</option>
+                <option value="Niki Lauda">Niki Lauda</option>
+                <option value="Mika Hakkinen">Mika Hakkinen</option>
+                <option value="Jenson Button">Jenson Button</option>
+                <option value="Romain Grosjean">Romain Grosjean</option>
+            </select>
+            <br><br>
+
+            <button type="button" id="saveBtn" class="formulaRedBtn">Save Profile</button>
+            <button type="button" id="clearBtn" class="liquidGlassBtn">Clear Form</button>
+        </form>
+    </div>
+    <script src="fanProfile.js"></script>
+</body>
+
+</html>

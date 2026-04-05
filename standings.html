@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Standings</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible+Mono:ital,wght@0,200..800;1,200..800&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Orbitron:wght@400..900&display=swap"
+        rel="stylesheet">
+</head>
+<body class="body1">
+    <nav class="navbar">
+            <div class="navLogo"><a href="index.html"><img src="icons8-formula-1-50.png" style="padding-left: 10px;" id="navLogo"></a></div>
+            <ul class="navLinks">
+                <li><a href="index.html" class="navButton">Back</a></li>
+                <li><a href="fanProfile.html" class="navButton">Your Profile</a></li>
+                <li><a href="help.html" class="navButton">Help</a></li>
+                <li><a href="https://github.com/ParthKhanayat" class="navButton">Github</a></li>
+            </ul>
+        </nav>
+    <div class="box">
+    <h1 id="standingHeading">Driver Standings</h1>
+
+    <div class="toggleContainer">
+        <div id="togglebg"></div>
+        <button class="toggle-btn active" onclick="switchTab('drivers')">Drivers</button>
+        <button class="toggle-btn" onclick="switchTab('constructors')">Teams</button>
+    </div>
+
+    <div class="table-container">
+        <table id="standingsTable">
+            <thead>
+                <tr id="tableHeader">
+                    </tr>
+            </thead>
+            <tbody id="standingsBody">
+                </tbody>
+        </table>
+    </div>
+</div>
+<script src="standings.js"></script>
+</body>
+</html>

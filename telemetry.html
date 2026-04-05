@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Telemetry</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible+Mono:ital,wght@0,200..800;1,200..800&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Orbitron:wght@400..900&display=swap"
+        rel="stylesheet">
+</head>
+
+<body class="body2">
+   <nav class="navbar">
+            <div class="navLogo"><a href="index.html"><img src="icons8-formula-1-50.png" style="padding-left: 10px;" id="navLogo"></a></div>
+            <ul class="navLinks">
+                <li><a href="index.html" class="navButton">Back</a></li>
+                <li><a href="fanProfile.html" class="navButton">Your Profile</a></li>
+                <li><a href="help.html" class="navButton">Help</a></li>
+                <li><a href="https://github.com/ParthKhanayat" class="navButton">Github</a></li>
+            </ul>
+        </nav>
+    <div class="box1">
+        <div class="display" id="telemetryHeading"><h2><b>NO LIVE RACES</b></h2><h3>( select a race from replay configuration below )</h3></div>
+        <div class="replay">
+            <form id="replayControls">
+                <fieldset>
+                <legend style="color: #eeff00;">Telemetry Replay Control</legend>
+                <label for="sessionSelect">Select Session: </label>
+                <select id="sessionSelect">
+                    <option value="1"></option>
+                    <option value="2"></option>
+                </select>
+                <label>Playback Speed: </label>
+                <input type="radio" id="speed1" name="speed" value="1" checked>
+                <label for="speed1">1x</label>
+                <input type="radio" id="speed2" name="speed" value="5">
+                <label for="speed2">5x</label>
+                <input type="radio" id="speed3" name="speed" value="10">
+                <label for="speed3">10x</label>
+                <button type="button" class="formulaRedBtn" onclick="startReplay()" style="font-size: smaller; padding:7px">Start Replay</button>
+                <button type="button" class="formulaWhiteBtn" onclick="pauseReplay()"style="font-size: smaller; padding:7px">Pause</button>
+                </fieldset>
+            </form>
+        </div>
+        <div class="box2">
+            <div class="positions">
+                <table id="positionsTable">
+                    <thead>
+                        <tr id="positionsHead">
+                            <td>Driver</td><td>Tire</td><td>Speed</td><td>Pits</td><td>Leader</td><td>Pos</td>
+                        </tr>
+                    </thead>
+                    <tbody id="positionsBody">
+
+                    </tbody>
+                </table>
+            </div>
+            <div class="track">
+                <canvas></canvas>
+            </div>
+        </div>
+    </div>
+    <script src="telemetry.js"></script>
+</body>
+
+</html>
