@@ -30,3 +30,37 @@ This project uses vanilla web technologies and does not require Node.js or a bun
 1. **Clone the repository:**
    ```bash
    git clone [https://github.com/ParthKhanayat/Formula-1-Telemetry-Dashboard.git](https://github.com/ParthKhanayat/Formula-1-Telemetry-Dashboard.git)
+  2. **Navigate to the project directory:**
+     ```bash
+
+    cd Formula-1-Telemetry-Dashboard
+
+    Open the application:
+
+        Simply double-click index.html to open it in your browser.
+
+        Alternatively (Recommended): Use the Live Server extension in VS Code to avoid any CORS issues during API fetching.
+
+📁 Project Structure
+
+    index.html - The main landing page.
+
+    telemetry.html / telemetry.js - Core logic for API polling, rate-limiting, and Canvas map rendering.
+
+    standings.html / standings.js - Logic for fetching and toggling championship points.
+
+    schedule.html / schedule.js - Logic for generating the interactive race calendar grid.
+
+    fanProfile.html / fanProfile.js - Form handling and local user preferences.
+
+    style.css - Global stylesheet containing dark mode aesthetics and F1 team color variables.
+
+**⚠️ Note on API Rate Limits**
+
+This application makes sequential fetch() requests to the OpenF1 API to prevent 429 Too Many Requests errors. If data fails to load initially, the API may be experiencing high traffic. Wait a few seconds and try refreshing the session.
+
+**👨‍💻 Author**
+
+Parth Khanayat
+
+    GitHub: @ParthKhanayat
