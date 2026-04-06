@@ -376,11 +376,12 @@ async function runHeartbeatTick(sessionKey) {
                 animateLeaderboard();
             }
         }
-    } catch (error) {
+    } 
+    catch (error) {
         console.warn(error);
     }
 
-    telemetryTimer = setTimeout(() => runHeartbeatTick(sessionKey), 2500);
+    telemetryTimer = setTimeout(() => runHeartbeatTick(sessionKey), 8000); //changed this to 8s because api was bitching
 }
 function animateLeaderboard() {
     const tbody = document.getElementById("positionsBody");
