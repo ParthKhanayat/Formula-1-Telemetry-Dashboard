@@ -727,3 +727,7 @@ tbody td
     font-family: 'Orbitron', sans-serif;
     font-size: 0.95rem;
 }
+.statusMessage
+{
+    display: none;
+}
