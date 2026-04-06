@@ -62,6 +62,7 @@ async function startReplay() {
     const startBtn = document.querySelector('button[onclick="startReplay()"]');
     if (startBtn) {
         startBtn.disabled = true;
+        alert("Status: Replay active. Cars are waiting for the green light. (Wait 5 seconds or increase playback speed to skip).");
         startBtn.innerText = "Loading...";
     }
 
