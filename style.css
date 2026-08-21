@@ -349,6 +349,19 @@ button {
     box-shadow: rgba(255, 0, 0, 0.426) 0px 0px 10px 1px;
 }
 
+.card-completed {
+    border: solid 2px #00ff3c;
+    box-shadow: rgba(0, 255, 60, 0.426) 0px 0px 10px 6px;
+}
+.card-completed:hover {
+    border: solid 3px #00ff3c;
+    box-shadow: rgba(0, 255, 60, 0.426) 0px 0px 10px 10px;
+}
+.card-completed:active {
+    border: solid 3px #00ff3c;
+    box-shadow: rgba(0, 255, 60, 0.426) 0px 0px 10px 1px;
+}
+
 .next-race-container {
     display: flex;
     flex-direction: row;

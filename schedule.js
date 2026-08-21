@@ -110,7 +110,11 @@ async function fetchData() {
         let localDate = raceDateTime.toLocaleDateString();
         let localTime = raceDateTime.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit', timeZoneName: 'short' });
 
-        grid.innerHTML += `<div class="card"> <a href="${url}">
+        let isCompleted = raceDateTime < now;
+        let cardClass = isCompleted ? "card card-completed" : "card";
+        let completedHTML = isCompleted ? `<p style="color: #00ff3c; font-size: 0.85rem; font-weight: bold; margin: 10px 0 0 0;">Race Completed ✓</p>` : `<br>`;
+
+        grid.innerHTML += `<div class="${cardClass}"> <a href="${url}">
                     <h3 style="font-weight: 1000;">${naam}</h3>
                     <h6 style="color: rgb(0, 250, 208)">${circuitName}</h6>
                     <p style="color: rgb(173, 173, 173); font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;"><b>Date: </b>${localDate}
@@ -119,7 +123,7 @@ async function fetchData() {
                 </p>
                 <img id="flagimg" src="${flagUrl}" alt="${countryCode}">
                 </a>
-                <br>
+                ${completedHTML}
                 <a href="https://www.google.com/maps/search/?api=1&query=${lat},${long}"><img id="location" alt="location" src="location.png"></a>
 
             </div>`
