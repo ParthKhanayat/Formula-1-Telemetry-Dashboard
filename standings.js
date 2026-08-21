@@ -25,7 +25,11 @@ async function fetchData() {
         endpoint='constructorStandings';
     }
     //fetching and organising json
-    const response= await fetch(`https://api.jolpi.ca/ergast/f1/current/${endpoint}.json`);
+    const response= await fetch(`https://api.jolpi.ca/ergast/f1/current/${endpoint}.json`, {
+        headers: {
+            "User-Agent": "F1TelemetryDashboard/1.0"
+        }
+    });
     const data= await response.json();
     //setting up the current year
     year=data.MRData.StandingsTable.season;

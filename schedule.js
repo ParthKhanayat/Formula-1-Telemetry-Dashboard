@@ -1,6 +1,10 @@
 async function fetchData() {
     //ordering the food
-    const response = await fetch("https://api.jolpi.ca/ergast/f1/current.json");
+    const response = await fetch("https://api.jolpi.ca/ergast/f1/current.json", {
+        headers: {
+            "User-Agent": "F1TelemetryDashboard/1.0"
+        }
+    });
 
     //plating the food
     const data = await response.json();
